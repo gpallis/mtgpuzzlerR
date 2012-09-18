@@ -1,0 +1,10 @@
+<h1> Hello Bastards </h1>
+<ul>
+{% for player in players.all %}
+  <li> Player 1's permanents are: </li>
+  {% for permanent in player.permanents.all %}
+    <li>{{ permanent.name }}</li>
+  {% endfor %}
+  <li> </li>
+{% endfor %}
+</ul>
