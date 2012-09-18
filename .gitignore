@@ -1,0 +1,9 @@
+*.pyc
+*.py~
+*.html~
+
+mtgpuzzlerP/settings.py
+.DS_Store
+.gitignore~
+
+
