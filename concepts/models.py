@@ -17,3 +17,5 @@ class BitOfCardboard(models.Model):
     player = models.ForeignKey(Player)
     card = models.ForeignKey(Card)
     quatity = models.IntegerField(default=1)
+    def __unicode__(self):
+        return self.player.name + "'s " + self.card.name + "(s)"
