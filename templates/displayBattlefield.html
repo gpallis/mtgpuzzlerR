@@ -12,8 +12,8 @@
 {% for player in players.all %}
 Player 1's permanents are: 
   {% for permanent in player.permanents.all %}
-    <li>  Name = {{ permanent.name }}</li>
-    <li>  picurl = {{ permanent.picurl }}</li>
+    {{ permanent.name }}
+    <IMG SRC={{ permanent.picurl }}  alt="What an amazing card" align=center> 
   {% endfor %}
   <p><p/>
 {% endfor %}
