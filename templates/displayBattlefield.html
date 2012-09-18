@@ -1,10 +1,15 @@
-<h1> Hello Bastards </h1>
+<html>
+
+<h1> Here is a BATTLEFIELD </h1>
 <ul>
 {% for player in players.all %}
-  <li> Player 1's permanents are: </li>
+Player 1's permanents are: 
   {% for permanent in player.permanents.all %}
-    <li>{{ permanent.name }}</li>
+    <li>  Name = {{ permanent.name }}</li>
+    <li>  picurl = {{ permanent.picurl }}</li>
   {% endfor %}
-  <li> </li>
+  <p><p/>
 {% endfor %}
 </ul>
+
+</html>

@@ -127,6 +127,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'mtgpuzzlerP',
     'concepts',
+    'puzzleViewer',
 )
 
 # A sample logging configuration. The only tangible logging
