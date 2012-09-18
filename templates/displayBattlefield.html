@@ -1,6 +1,13 @@
 <html>
 
-<h1> Here is a BATTLEFIELD </h1>
+ <!-- Begin Wrapper -->
+ <div id="wrapper">
+  <!-- Begin Content -->
+  <div id="content">
+
+  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/main.css" />  
+  
+  <h1> Here is a BATTLEFIELD </h1>
 <ul>
 {% for player in players.all %}
 Player 1's permanents are: 
@@ -11,5 +18,10 @@ Player 1's permanents are:
   <p><p/>
 {% endfor %}
 </ul>
+
+  </div>
+  <!-- End Content -->
+ </div>
+ <!-- End Wrapper -->		 
 
 </html>
