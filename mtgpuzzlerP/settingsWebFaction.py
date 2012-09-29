@@ -107,6 +107,8 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    "/home/gpallis/webapps/puzzles/mtgPuzzlerP/static/"
+    "/home/gpallis/webapps/puzzles/mtgPuzzlerP/templates/"
 )
 
 INSTALLED_APPS = (
@@ -120,6 +122,9 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'mtgpuzzlerP',
+    'concepts',
+    'puzzleViewer',
 )
 
 # A sample logging configuration. The only tangible logging

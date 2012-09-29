@@ -2,7 +2,7 @@
 *.py~
 *.html~
 
-mtgpuzzlerA/settings.py
+mtgpuzzlerP/settings.py
 .DS_Store
 .gitignore~
 
