@@ -8,20 +8,16 @@
   <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/main.css" />  
   
   <h1> Here is a BATTLEFIELD </h1>
-<ul>
-{% for player in players.all %}
-Player 1's permanents are: 
-  {% for permanent in player.permanents.all %}
-    {{ permanent.name }}
-    <IMG SRC={{ permanent.picurl }}  alt="What an amazing card" align=center> 
-  {% endfor %}
-  <p><p/>
-{% endfor %}
-</ul>
+    
+    <div id ="hand">
+    {% for player in players.all %}
+    {% for permanent in player.permanents.all %}
+    <IMG class = "card" SRC={{ permanent.picurl }}  alt="What an amazing card">
+    {% endfor %}
+    {% endfor %}
+    </div> 
 
   </div>
-  <!-- End Content -->
  </div>
- <!-- End Wrapper -->		 
 
 </html>

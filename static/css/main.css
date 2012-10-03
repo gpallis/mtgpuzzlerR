@@ -11,13 +11,12 @@
 
 p{color:red}
 
-* { padding: 0.5em 0; margin: 0px; }
-
 body {
  font-family: Arial, Helvetica, sans-serif;
  font-size: 13px;
  background: lightblue;
 }
+
 #wrapper { 
  margin: 5px auto;
  width: 922px;
@@ -28,26 +27,22 @@ body {
  border: 2px solid #ccc;
  margin: 10px 0px 10px 0px;
  padding: 15px;
- //height: 100px;
  background: #FEFEFE;
 }
-img { 
-  margin: 20px 
+
+#hand {
+  padding:5px;
+  border: 1px dashed;
+  //background-color:red;
+  height:250px;
+  text-align:center;
 }
-//a {text-decoration: none}
 
-//a {
-//  text-decoration: none;
-//  visited{color: blue}
-//}
-
-a {
-  text-decoration:  none;
-  color:  blue;
+img.card {
+  height:100%;
 }
 
 h1 {
  padding: 0px;
+ color:blue;
 }
-
-
