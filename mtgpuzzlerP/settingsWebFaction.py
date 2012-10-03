@@ -4,8 +4,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Greg Pallis' , 'mostlyconnect@gmail.com'),
-    ('Niall Cardin', 'NiallC@gmail.com'),
+    # ('Your Name', 'your_email@example.com'),
 )
 
 MANAGERS = ADMINS
@@ -13,9 +12,9 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'gpallis_db2',           # Or path to database file if using sqlite3.
-        'USER': 'gpallis_db2',           # Not used with sqlite3.
-        'PASSWORD': '41e422bf',          # Not used with sqlite3.
+        'NAME': 'gpallis_db2',                      # Or path to database file if using sqlite3.
+        'USER': 'gpallis_db2',                      # Not used with sqlite3.
+        'PASSWORD': '41e422bf',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -57,11 +56,11 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = '/home/gpallis/webapps/staticmediaapp/'
+STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = ''
+STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -79,7 +78,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'w57u37q*^l9e=3&amp;z-&amp;6%4*427cx!fjnpmx801x0glh0v-0vv3i'
+SECRET_KEY = 'srp)di9e8mtk()uae-49)$@98$0ah2i+6nct1&amp;p(@a+!nu@)6f'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -104,11 +103,11 @@ ROOT_URLCONF = 'mtgpuzzlerP.urls'
 WSGI_APPLICATION = 'mtgpuzzlerP.wsgi.application'
 
 TEMPLATE_DIRS = (
+    '/home/gpallis/webapps/staticmediaapp/puzzles',
+    '/home/gpallis/webapps/puzzles/mtgpuzzlerP/templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    "/home/gpallis/webapps/puzzles/mtgPuzzlerP/static/"
-    "/home/gpallis/webapps/puzzles/mtgPuzzlerP/templates/"
 )
 
 INSTALLED_APPS = (
@@ -121,7 +120,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    #'django.contrib.admindocs',
     'mtgpuzzlerP',
     'concepts',
     'puzzleViewer',
