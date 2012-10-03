@@ -1,13 +1,3 @@
-/*
-      Created by Keith Donegan of Code-Sucks.com
-	  
-	  E-Mail: Keithdonegan@gmail.com
-	  
-	  You can do whatever you want with these layouts,
-	  but it would be greatly appreciated if you gave a link
-	  back to http://www.code-sucks.com
-	  
-*/
 
 p{color:red}
 
@@ -35,6 +25,10 @@ body {
   border: 1px dashed;
   //background-color:red;
   height:250px;
+  text-align:center;
+  margin:auto
+}
+#handContainer {
   text-align:center;
 }
 

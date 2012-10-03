@@ -9,13 +9,15 @@
   
   <h1> Here is a BATTLEFIELD </h1>
     
-    <div id ="hand">
-    {% for player in players.all %}
+    <div id="handContainer">
+    <div style="text-align:center">YOUR HAND</div>
+    <div id ="hand" style ="width:{{handWidth}}">
     {% for permanent in player.permanents.all %}
     <IMG class = "card" SRC={{ permanent.picurl }}  alt="What an amazing card">
     {% endfor %}
-    {% endfor %}
-    </div> 
+    </div>
+    </div>
+    </div>
 
   </div>
  </div>
