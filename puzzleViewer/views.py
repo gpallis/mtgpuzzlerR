@@ -6,7 +6,7 @@ from django.shortcuts import render
 from concepts.models import Player
 
 def displayBattlefield(request):
-  player = Player.objects.get(name="Dave")
+  player = Player.objects.all()[0]
   return render(request, "displayBattlefield.html", {
     'player':player,
     'handWidth':player.permanents.count()*175 + 10,
