@@ -46,7 +46,7 @@ $(document).ready(function(){
     <h1> Here is a BATTLEFIELD </h1>
       
     <div id="handContainer">
-      <div id ="hand" style ="width:{{handWidth}}">
+      <div id ="hand" style ="width:{{handWidth}}px">
         <!--loop through, creating the cards, and giving them appropriate names-->
         {% for permanent in player.permanents.all %}
         <cardButton{{permanent.id}}><IMG name = "cardButton{{permanent.id}}" class = "card" SRC={{ permanent.picurl }} alt="What an amazing card"></cardButton{{permanent.id}}>
