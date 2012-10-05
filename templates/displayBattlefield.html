@@ -1,24 +1,61 @@
+<!DOCTYPE html>
 <html>
+  
+<head>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/main.css" />  
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>
+{% for permanent in player.permanents.all %}
+$(document).ready(function() {$('bigCard{{permanent.id}}').hide();});
+{% endfor %}
+{% for permanent in player.permanents.all %}
+$(document).ready(function(){
+  $("cardButton{{permanent.id}}").click(function(){
+    //$('[name|="card1"]').hide();
+    alert("{{permanent.name}}");
+  });
+});
+
+$(document).ready(function(){
+  $("cardButton{{permanent.id}}").hover(
+    function () {
+      // <IMG name="card2" class = "card" SRC=http://magiccards.info/scans/en/rtr/143.jpg  alt="What an amazing card">
+      // $(this).hide();
+      $("bigCard{{permanent.id}}").fadeIn("fast");
+    },
+    function () {
+      $("bigCard{{permanent.id}}").fadeOut("fast");
+    }    
+  );
+});
+{% endfor %}
+  
+
+</script>
+</head>
+
+<!--loop through, creating big images.-->
+{% for permanent in player.permanents.all %}
+<bigCard{{permanent.id}}><IMG name="bigCard{{permanent.id}}" class = "bigCard" SRC={{ permanent.picurl }}  
+                     alt="Woah, now I can read it" style="position:fixed"></bigCard{{permanent.id}}>
+{% endfor %}
 
  <!-- Begin Wrapper -->
  <div id="wrapper">
   <!-- Begin Content -->
   <div id="content">
-
-  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/main.css" />  
-  
-  <h1> Here is a BATTLEFIELD </h1>
     
+    <h1> Here is a BATTLEFIELD </h1>
+      
     <div id="handContainer">
-    <div style="text-align:center">YOUR HAND</div>
-    <div id ="hand" style ="width:{{handWidth}}">
-    {% for permanent in player.permanents.all %}
-    <IMG class = "card" SRC={{ permanent.picurl }}  alt="What an amazing card">
-    {% endfor %}
+      <div id ="hand" style ="width:{{handWidth}}">
+        <!--loop through, creating the cards, and giving them appropriate names-->
+        {% for permanent in player.permanents.all %}
+        <cardButton{{permanent.id}}><IMG name = "cardButton{{permanent.id}}" class = "card" SRC={{ permanent.picurl }} alt="What an amazing card"></cardButton{{permanent.id}}>
+        {% endfor %}
+      </div>
     </div>
-    </div>
-    </div>
-
+  
   </div>
  </div>
 
